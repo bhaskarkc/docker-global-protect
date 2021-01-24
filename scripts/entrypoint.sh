@@ -19,8 +19,10 @@ gvpn() {
     | openconnect --protocol=gp "${SERVER}" \
         --servercert pin-sha256:"$(_sha256)" \
         --user="${USER}" -b && echo "Connected!" && \
-        apk add curl && curl -IL "${TEST_SERVER}" && \
-    /bin/bash
+        echo "Testing url: ${TEST_SERVER}" &&
+        apk add curl
+        curl -v "${TEST_SERVER}"
+        /bin/bash
 }
 
 gvpn
