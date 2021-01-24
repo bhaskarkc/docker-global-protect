@@ -7,21 +7,6 @@ author: 'Bhaskar KC <xlinkerz@gmail.com>'
 # action description
 description: 'GlobalProtect connection'
 
-# action input values
-inputs:
-  server:
-      description: 'Global Protect Server URL.'
-      required: true
-      default: ''
-  username:
-      description: 'Global Protect user.'
-      required: true
-      default: ''
-  password:
-      description: 'Global Protect Password.'
-      required: true
-      default: ''
-
 # action runner
 runs:
   using: 'docker'
