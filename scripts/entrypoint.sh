@@ -19,8 +19,6 @@ gvpn() {
     | openconnect --protocol=gp "${SERVER}" \
         --servercert pin-sha256:"$(_sha256)" \
         --user="${USER}" -b && echo "Connected!" && \
-        echo "Testing url: ${TEST_SERVER}" &&
-        ping -c 1 ${TEST_SERVER}
         /bin/bash
 }
 
