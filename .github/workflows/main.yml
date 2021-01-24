@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Global Protect
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Connect
         uses: "./"
         with:
