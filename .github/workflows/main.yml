@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Global Protect
+    steps:
+      - name: Connect
+        uses: "./"
+        with:
+          username: ${{ secrets.GB_USERNAME }}
+          password: ${{ secrets.GB_PASSWORD }}
+          server: ${{ secrets.GB_SERVER }}
+
+      - name: Check if connected
+        run: curl -v ${{ secrets.TEST_SERVER }}
