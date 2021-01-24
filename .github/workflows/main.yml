@@ -7,13 +7,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
       - name: Connect
         uses: "./"
         with:
-          username: ${{ secrets.GB_USERNAME }}
-          password: ${{ secrets.GB_PASSWORD }}
+          user: ${{ secrets.GB_USERNAME }}
+          pass: ${{ secrets.GB_PASSWORD }}
           server: ${{ secrets.GB_SERVER }}
-
       - name: Check if connected
         run: curl -v ${{ secrets.TEST_SERVER }}
