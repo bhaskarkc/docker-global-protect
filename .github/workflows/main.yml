@@ -9,9 +9,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Connect
         uses: "./"
-        with:
-          username: ${{ secrets.GB_USERNAME }}
-          password: ${{ secrets.GB_PASSWORD }}
-          server: ${{ secrets.GB_SERVER }}
+        env:
+          USER: ${{ secrets.GB_USERNAME }}
+          PASS: ${{ secrets.GB_PASSWORD }}
+          SERVER: ${{ secrets.GB_SERVER }}
       - name: Check if connected
         run: curl -v ${{ secrets.TEST_SERVER }}
