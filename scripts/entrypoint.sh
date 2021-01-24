@@ -15,7 +15,7 @@ _sha256() {
 
 
 gvpn() {
-    echo -n "${PASSWORD}" \
+    echo -n "${PASS}" \
     | openconnect --protocol=gp "${SERVER}" \
     --servercert pin-sha256:"$(_sha256)" \
     --user="${USER}" -b && echo "Connected!"\
