@@ -10,8 +10,8 @@ jobs:
       - name: Connect
         uses: "./"
         with:
-          user: ${{ secrets.GB_USERNAME }}
-          pass: ${{ secrets.GB_PASSWORD }}
+          username: ${{ secrets.GB_USERNAME }}
+          password: ${{ secrets.GB_PASSWORD }}
           server: ${{ secrets.GB_SERVER }}
       - name: Check if connected
         run: curl -v ${{ secrets.TEST_SERVER }}

@@ -13,7 +13,7 @@ inputs:
       description: 'Global Protect Server URL.'
       required: true
       default: ''
-  user:
+  username:
       description: 'Global Protect user.'
       required: true
       default: ''
