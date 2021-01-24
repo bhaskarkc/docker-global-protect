@@ -18,10 +18,10 @@ gvpn() {
     echo -n "${PASS}" \
     | openconnect --protocol=gp "${SERVER}" \
     --servercert pin-sha256:"$(_sha256)" \
-    --user="${USER}" -b && echo "Connected!"\
-    && sleep 5 &&
-    iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE &&
-    iptables -A FORWARD -i eth0 -j ACCEPT &&
+    --user="${USER}" -b && echo "Connected!" && \
+    # sleep 5 &&
+    # iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE &&
+    # iptables -A FORWARD -i eth0 -j ACCEPT &&
     /bin/bash
 }
 
