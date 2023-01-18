@@ -13,4 +13,5 @@ jobs:
           USER: ${{ secrets.GB_USER }}
           PASS: ${{ secrets.GB_PASSWORD }}
           SERVER: ${{ secrets.GB_SERVER }}
+          PORT: ${{ secrets.GB_PORT }}
           TEST_SERVER: ${{ secrets.TEST_SERVER }}
