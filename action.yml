@@ -21,6 +21,11 @@ inputs:
       description: 'Global Protect Password.'
       required: true
       default: ''
+      
+  PORT:
+      description: 'Global Protect Port.'
+      required: true
+      default: 443
 
 # action runner
 runs:
