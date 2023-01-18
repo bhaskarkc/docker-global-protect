@@ -5,7 +5,7 @@
 _sha256() {
     echo 'Q' \
         | openssl s_client \
-        -connect "${SERVER}":443 \
+        -connect "${SERVER}":"${PORT}" \
         2> /dev/null \
         | openssl x509 -pubkey -noout \
         | openssl pkey -pubin -outform der \
